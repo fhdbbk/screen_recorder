@@ -1,8 +1,12 @@
 import numpy as np
 import cv2
 import pyautogui
+import os
 # from PIL import ImageGrab
 from PIL import Image
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+print(f"Base folder: {BASE_DIR}")
 
 SCREEN_WIDTH = 640
 SCREEN_HEIGHT = 480
@@ -10,7 +14,7 @@ SCREEN_HEIGHT = 480
 X_POS = 20
 Y_POS = 20
 
-mouse_pointer = Image.open('images/cursor.png')
+mouse_pointer = Image.open(os.path.join(BASE_DIR, 'images/cursor.png'))
 
 
 def capture_screen():
